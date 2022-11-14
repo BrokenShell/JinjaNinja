@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Seed</h2>
+    <form action="{{ url_for('seed_page') }}" method="post">
+        <p><label>Amount
+            <input name="amount" type="text" required>
+        </label></p>
+        <p><label>Sentiment
+            <select name="sentiment">
+                <option>Positive</option>
+                <option>Neutral</option>
+                <option>Negative</option>
+            </select>
+        </label></p>
+        <p><button type="submit">Submit</button></p>
+    </form>
+    {{ table | safe }}
+{% endblock %}

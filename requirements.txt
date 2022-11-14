@@ -1,0 +1,10 @@
+flask
+Fortuna
+gunicorn
+Werkzeug
+bleach
+certifi
+python-dotenv
+pymongo[srv]
+pandas
+vaderSentiment

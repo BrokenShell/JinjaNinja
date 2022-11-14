@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>JinjaNinja</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    {% block scripts %}
+    {% endblock %}
+</head>
+<body>
+<section>
+    <header>
+        <h1>
+            <a href="{{ url_for('home_page') }}">JinjaNinja</a>
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home_page') }}">Home</a></li>
+            <li><a href="{{ url_for('input_page') }}">Input</a></li>
+            <li><a href="{{ url_for('output_page') }}">Output</a></li>
+            <li><a href="{{ url_for('seed_page') }}">Seeds</a></li>
+        </ul>
+    </nav>
+    <article>
+        {% block content %}
+        {% endblock %}
+    </article>
+</section>
+<footer>
+    <p class="right">© 2022 Bloom Institute of Technology</p>
+</footer>
+</body>
+</html>
